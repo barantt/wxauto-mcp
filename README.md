@@ -25,22 +25,25 @@
 
 ## 使用方法
 
-### Claude Desktop
+### 安装uv
+
+参考[uv官方安装文档](https://docs.astral.sh/uv/getting-started/installation/)
+
+### 配置wxauto-mcp
+
+```bash
+git clone https://github.com/barantt/wxauto-mcp.git
+cd wxauto-mcp
+uv sync
+```
+
+### Claude Desktop 配置
 
 要在Claude Desktop中使用，请添加服务器配置：
 
 在MacOS上：`~/Library/Application\ Support/Claude/claude_desktop_config.json`  
 在Windows上：`%APPDATA%/Claude/claude_desktop_config.json`
 
-
-先添加以下配置：
-
-```bash
-git clone https://github.com/barantt/wxauto-mcp.git
-cd wxauto-mcp
-uv sync
-uv build
-```
 
 ```json
 "mcpServers": {
@@ -54,3 +57,27 @@ uv build
     ]
   }
 }
+```
+
+
+### Cursor配置
+在Cursor中使用，请在Cursor的MCP配置文件中添加以下内容：
+
+在Windows上：`%USERPROFILE%\.cursor\mcp.json`  
+
+在MacOS上：`~/.cursor/mcp.json`
+
+```json
+"mcpServers": {
+  "wxauto-mcp": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path\\to\\wxauto-mcp",
+      "run",
+      "wxauto_mcp.py"
+    ]
+  }
+}
+```
+
