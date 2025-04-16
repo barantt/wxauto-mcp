@@ -1,8 +1,10 @@
 # wxauto-mcp
 
 一个基于微信自动化的MCP服务器，用于与微信客户端交互。
-该服务器利用[wxauto库实](https://github.com/cluic/wxauto.git)现微信消息的发送和接收功能，使大语言模型能够通过wxauto与微信进行交互。
+该服务器利用[wxauto](https://github.com/cluic/wxauto.git)库实现微信消息的发送和接收功能，使大语言模型能够通过wxauto与微信进行交互。
 
+## ⚠️注意
+本mcp server只适用windows系统，且对微信版本有一定限制， 详情请参考[wxauto文档](https://docs.wxauto.org/doc/enviorment)
 
 ## 功能特点
 
@@ -41,7 +43,6 @@ uv sync
 
 要在Claude Desktop中使用，请添加服务器配置：
 
-在MacOS上：`~/Library/Application\ Support/Claude/claude_desktop_config.json`  
 在Windows上：`%APPDATA%/Claude/claude_desktop_config.json`
 
 
@@ -64,8 +65,6 @@ uv sync
 在Cursor中使用，请在Cursor的MCP配置文件中添加以下内容：
 
 在Windows上：`%USERPROFILE%\.cursor\mcp.json`  
-
-在MacOS上：`~/.cursor/mcp.json`
 
 ```json
 "mcpServers": {
