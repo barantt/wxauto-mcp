@@ -1,7 +1,7 @@
 [project]
 name = "wxauto-mcp"
 version = "0.1.0"
-description = "Add your description here"
+description = "wxauto mcp server"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
