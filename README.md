@@ -1,7 +1,7 @@
 # wxauto-mcp
 
 一个基于微信自动化的MCP服务器，用于与微信客户端交互。
-该服务器利用wxauto库实现微信消息的发送和接收功能，使大语言模型能够通过wxauto与微信进行交互。
+该服务器利用[wxauto库实](https://github.com/cluic/wxauto.git)现微信消息的发送和接收功能，使大语言模型能够通过wxauto与微信进行交互。
 
 
 ## 功能特点
